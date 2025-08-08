@@ -65,7 +65,9 @@ Legend: 🔴 >10s  🟡 >1s  🟢 ≤1s  🔵 TCP  🟣 UDP  ⚪ Other
 ### 🧠 AI Summary (via Ollama)
 
 🤖 Model: tinyllama:1.1b
+
 🕒 Generated: 2025-08-08 15:04 CDT
+
 📊 Events Analyzed: 1,204
 
 Summary:
