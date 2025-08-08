@@ -11,6 +11,7 @@ DeltaPerf AI is a powerful Python-based tool for analyzing .pcap and .pcapng net
 - User-Friendly CLI: Includes color-coded legends, prompts for deeper insights, and graceful error handling.
 
 🧠 AI Integration
+
 If Ollama is running locally, the tool can generate intelligent summaries of network behavior and optionally perform anomaly detection. This includes identifying unusual latency patterns, retransmissions, and suspicious traffic, with actionable suggestions.
 
 📦 Requirements
