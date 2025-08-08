@@ -61,6 +61,7 @@ Legend: 🔴 >10s  🟡 >1s  🟢 ≤1s  🔵 TCP  🟣 UDP  ⚪ Other
 
 🧮 Average Delta Time (s): 0.002345
 
+
 ### 🧠 AI Summary (via Ollama)
 
 🤖 Model: tinyllama:1.1b
