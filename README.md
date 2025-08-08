@@ -1,28 +1,103 @@
-🚀 DeltaPerf AI – Intelligent PCAP Latency Analyzer
+# 🚀 DeltaPerf AI
 
-DeltaPerf AI is a powerful Python-based tool for analyzing .pcap and .pcapng network capture files with a focus on latency detection and protocol behavior. It combines traditional packet inspection with AI-powered summarization to help network engineers, analysts, and researchers uncover performance bottlenecks and anomalies in real time.
+**DeltaPerf AI** is a Python-powered tool for analyzing `.pcap` and `.pcapng` network capture files with a focus on latency detection, protocol behavior, and AI-powered summarization. Whether you're a network engineer, security analyst, or curious hacker, DeltaPerf AI transforms raw packet data into actionable insights.
 
-🔍 Key Features
-- Multi-file PCAP Analysis: Automatically scans and processes all capture files in the specified directory.
-- Latency Detection: Calculates delta times between packets and flags high-latency events (>1s) and extreme latency spikes (>10s).
-- Protocol-Aware Insights: Differentiates TCP, UDP, and other protocols with color-coded output for quick visual parsing.
-- Interactive Summary Dashboard: Displays a tabulated summary of total files, packets, latency events, and average delta time.
-- AI-Powered Summarization: Integrates with Ollama to generate expert-level summaries and anomaly detection reports using models like tinyllama:1.1b.
-- User-Friendly CLI: Includes color-coded legends, prompts for deeper insights, and graceful error handling.
+---
 
-🧠 AI Integration
+## 🔍 Features
 
-If Ollama is running locally, the tool can generate intelligent summaries of network behavior and optionally perform anomaly detection. This includes identifying unusual latency patterns, retransmissions, and suspicious traffic, with actionable suggestions.
+- 📁 **Multi-file PCAP Analysis** – Automatically scans and processes all capture files in a directory.
+- 🔥 **Latency Detection** – Flags high-latency events (>1s) and extreme spikes (>10s).
+- 🎨 **Color-Coded CLI Dashboard** – Uses `colorama` and `tabulate` for clean, readable summaries.
+- 🤖 **AI-Powered Summaries** – Integrates with [Ollama](https://ollama.com) to generate expert-level insights.
+- ⚠️ **Anomaly Detection** – Optional deep dive into suspicious patterns and performance issues.
+- 🧠 **Interactive Prompts** – Choose when to trigger AI analysis or skip it.
 
-📦 Requirements
+---
+
+## 📦 Requirements
+
 - Python 3.8+
-- pyshark, tabulate, colorama, requests
+- pyshark
+- tabulate
+- colorama
+- requests
 
-🛠️ Getting Started
-- Place your .pcap files in the working directory.
-- Ensure Ollama is running if you want AI features.
-- Run the script and follow the prompts.
+Install dependencies:
 
-DeltaPerf AI transforms raw packet data into meaningful insights with a blend of analytics and AI. Whether you're debugging network issues or conducting forensic analysis, this tool delivers clarity, speed, and intelligence.
+```bash
+pip install pyshark tabulate colorama requests
+```
 
-Contributions and feedback are welcome!
+---
+
+## 🛠️ Usage
+
+1. Place your `.pcap` or `.pcapng` files in the working directory.
+2. Start your local Ollama server (if using AI features).
+3. Run the script:
+
+```bash
+python delta_perf_ai.py
+```
+
+---
+
+## 📊 Sample Output
+
+### 🎨 Color Legend
+
+Legend: 🔴 >10s  🟡 >1s  🟢 ≤1s  🔵 TCP  🟣 UDP  ⚪ Other
+
+
+### 📁 File Summary
+
+
+📁 Available Capture Files: 3
+📦 Total Packets Analyzed: 45,320
+🔥 Latency Events (>1s): 87
+🧮 Average Delta Time (s): 0.002345
+
+### 🧠 AI Summary (via Ollama)
+
+🤖 Model: tinyllama:1.1b
+🕒 Generated: 2025-08-08 15:04 CDT
+📊 Events Analyzed: 1,204
+
+Summary:
+- Latency spikes observed in TCP traffic between 192.168.1.10 and 192.168.1.20.
+- UDP traffic remained stable with minimal delay.
+- No retransmissions or suspicious behavior detected.
+
+## ⚠️ Error Handling
+
+If a file is missing or unreadable:
+
+❌ Error processing file ./captures/fuzz-2006-06-26-2594.pcap: [Errno 2] No such file or directory
+
+If Ollama is not running:
+
+❌ Ollama is not running. Please start Ollama server to use AI features.
+
+## 📈 Future Enhancements
+
+- Export summary to `.txt` or `.csv`
+- GUI dashboard with charts
+- Real-time packet stream analysis
+- Integration with cloud-based capture sources
+
+## 🤝 Contributing
+
+Pull requests and feedback are welcome! Feel free to fork the repo, suggest features, or report bugs.
+
+## 🧠 Built With
+
+- Python
+- PyShark
+- Tabulate
+- Colorama
+- Ollama (for AI summaries)
+
+## 📜 License
+
+MIT License — free to use, modify, and share.
