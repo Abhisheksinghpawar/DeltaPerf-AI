@@ -54,8 +54,11 @@ Legend: 🔴 >10s  🟡 >1s  🟢 ≤1s  🔵 TCP  🟣 UDP  ⚪ Other
 
 
 📁 Available Capture Files: 3
+
 📦 Total Packets Analyzed: 45,320
+
 🔥 Latency Events (>1s): 87
+
 🧮 Average Delta Time (s): 0.002345
 
 ### 🧠 AI Summary (via Ollama)
